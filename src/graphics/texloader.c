@@ -1,4 +1,4 @@
-GLuint textures[3];
+GLuint textures[4];
 
 void loadTexture(GLuint texture,const char *filename) {
 	glBindTexture(GL_TEXTURE_2D, texture);
@@ -16,9 +16,14 @@ void loadTexture(GLuint texture,const char *filename) {
 		free(image);
 }
 
+/*
+ * Put textures here
+ */
+
 void loadtextures(){
-	glGenTextures(3, textures);
+	glGenTextures(4, textures);
 	loadTexture(textures[0],"./res/img/cu.png");
-	loadTexture(textures[1],"./res/img/notcu.png");
+	//loadTexture(textures[1],"./res/img/notcu.png");
 	loadTexture(textures[2],"./res/img/simcu.png");
+	loadTexture(textures[3],"./res/img/DuumF1.png");
 }

@@ -114,7 +114,6 @@ void renderScene(void) {
 	// sky color 
 	glClearColor(0.5, 0.0, 0.0, 0.0); // UGLY
 	// Draw ground
-	loadtextures();
 	glBindTexture(GL_TEXTURE_2D, textures[0]);
 	glEnable(GL_TEXTURE_2D);
 	glBegin(GL_QUADS);
@@ -179,16 +178,16 @@ void renderScene(void) {
 		// kill me please
 		// DOESNT WORK IN ARCH BTW
 		if (wut == 0) {
-			glColor3f(1.0, 1.0, 1.0);renderBitmapString(50,(glutGet(GLUT_SCREEN_HEIGHT) / 2),0,GLUT_BITMAP_HELVETICA_18,"Play gayme");glColor3f(0.5, 0.5, 0.5);
+			glColor3f(1.0, 1.0, 1.0);renderBitmapString(50,(glutGet(GLUT_WINDOW_HEIGHT) / 2),0,GLUT_BITMAP_HELVETICA_18,"->Play game");glColor3f(0.5, 0.5, 0.5);
 		}
 		else {
-			glColor3f(0.5, 0.5, 0.5);renderBitmapString(50,(glutGet(GLUT_SCREEN_HEIGHT) / 2),0,GLUT_BITMAP_HELVETICA_18,"Play gayme");glColor3f(1.0, 1.0, 1.0);
+			glColor3f(0.5, 0.5, 0.5);renderBitmapString(50,(glutGet(GLUT_WINDOW_HEIGHT) / 2),0,GLUT_BITMAP_HELVETICA_18,"Play game");glColor3f(1.0, 1.0, 1.0);
 		}
 		if (wut == 1) {
-			glColor3f(1.0, 1.0, 1.0);renderBitmapString(50,((glutGet(GLUT_SCREEN_HEIGHT) / 2) + 50),0,GLUT_BITMAP_HELVETICA_18,"Exit this crap");glColor3f(0.5, 0.5, 0.5);
+			glColor3f(1.0, 1.0, 1.0);renderBitmapString(50,((glutGet(GLUT_WINDOW_HEIGHT) / 2) + 20),0,GLUT_BITMAP_HELVETICA_18,"->Exit");glColor3f(0.5, 0.5, 0.5);
 		}
 		else {
-			glColor3f(0.5, 0.5, 0.5);renderBitmapString(50,((glutGet(GLUT_SCREEN_HEIGHT) / 2) + 50),0,GLUT_BITMAP_HELVETICA_18,"Exit this crap");glColor3f(1.0, 1.0, 1.0);
+			glColor3f(0.5, 0.5, 0.5);renderBitmapString(50,((glutGet(GLUT_WINDOW_HEIGHT) / 2) + 20),0,GLUT_BITMAP_HELVETICA_18,"Exit");glColor3f(1.0, 1.0, 1.0);
 		}
 		glPopMatrix();
 		restorePerspectiveProjection();
@@ -213,7 +212,9 @@ int main(int argc, char *argv[]) {
 	// init GLUT and create window
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA | GLUT_MULTISAMPLE );
-	glutInitWindowPosition(320,320);
+	glutInitWindowSize(960, 540);
+	glutInitWindowPosition((glutGet(GLUT_SCREEN_WIDTH)-960)/2,
+				(glutGet(GLUT_SCREEN_HEIGHT)-540)/2);
 	glutCreateWindow("DuuM");
 
 	lighting();

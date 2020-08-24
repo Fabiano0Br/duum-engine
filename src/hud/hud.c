@@ -20,7 +20,7 @@ void drawMenuHud(){
 	// switch back to modelview mode
 	glLoadIdentity();
 	glDisable(GL_COLOR_MATERIAL);
-	glBindTexture(GL_TEXTURE_2D, textures[1]);
+	/*glBindTexture(GL_TEXTURE_2D, textures[1]);
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_BLEND);
 	glDepthMask(GL_FALSE);
@@ -29,6 +29,15 @@ void drawMenuHud(){
 	glTexCoord3f(1,1,1); glVertex3f(0.95f, 0.1f, 0.0f);   // top-right
 	glTexCoord3f(1,0,0); glVertex3f(0.95f, 0.8f, 0.0f);    // bottom-right
 	glTexCoord3f(0,0,0); glVertex3f(0.05f, 0.8f, 0.0f);    // bottom-left
+	glEnd();
+	glDisable(GL_TEXTURE_2D);*/
+	glBindTexture(GL_TEXTURE_2D, textures[3]);
+	glEnable(GL_TEXTURE_2D);
+	glBegin(GL_QUADS);
+	glTexCoord3f(0,1,0); glVertex3f(-1.0f, -2.0f, 0.0f);   // top-left
+	glTexCoord3f(1,1,1); glVertex3f(2.0f, -2.0f, 0.0f);   // top-right
+	glTexCoord3f(1,0,0); glVertex3f(2.0f, 1.0f, 0.0f);    // bottom-right
+	glTexCoord3f(0,0,0); glVertex3f(-1.0f, 1.0f, 0.0f);    // bottom-left
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_BLEND);
