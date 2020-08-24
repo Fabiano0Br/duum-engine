@@ -9,7 +9,7 @@ void loadTexture(GLuint texture,const char *filename) {
 	unsigned char *image;
 	unsigned int width, height;
 	error = lodepng_decode32_file(&image, &width, &height, filename);
-	if (error) 
+	if (error)  
 		printf("ERROR %u: %s. FILENAME: %s\n", error, lodepng_error_text(error), filename);
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, image);
 	

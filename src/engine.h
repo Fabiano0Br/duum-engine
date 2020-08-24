@@ -21,7 +21,10 @@
 
 // ENGINE
 #include "var.h"
+#include "log/log.c"
+#include "hud/hud.c"
 #include "hud/menu.c"
 #include "audio/mixer.c"
 #include "graphics/texloader.c"
-#include "log/log.c"
+#include "input/input.c"
+
