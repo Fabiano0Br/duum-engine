@@ -7,7 +7,7 @@ void sysInfo(){
 	char * sysinfo;
 	char * arch;
 	#if __LINUX__ 
-	isysinfo = "LINUX";
+	sysinfo = "LINUX";
 	#elif __WIN32
 	sysinfo = "WINDOWS";
 	arch = "32 bit";
