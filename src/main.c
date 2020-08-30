@@ -190,8 +190,9 @@ void renderScene(void) {
 		}
 		glPopMatrix();
 		restorePerspectiveProjection();
-		glutSwapBuffers();
 		drawMenuHud();
+		glutSwapBuffers();
+
 		frame++;
 		timeget=glutGet(GLUT_ELAPSED_TIME);
 		printf("FPS:%4.2f\n", frame*1000.0/(timeget-timebase));
