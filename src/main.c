@@ -171,7 +171,6 @@ void renderScene(void) {
 		glutSwapBuffers();
 	}
 	else if (is_in_menu == 1) {
-		drawMenuHud();
 		setOrthographicProjection();
 		glPushMatrix();
 		glLoadIdentity();
@@ -192,7 +191,7 @@ void renderScene(void) {
 		glPopMatrix();
 		restorePerspectiveProjection();
 		glutSwapBuffers();
-
+		drawMenuHud();
 		frame++;
 		timeget=glutGet(GLUT_ELAPSED_TIME);
 		printf("FPS:%4.2f\n", frame*1000.0/(timeget-timebase));
