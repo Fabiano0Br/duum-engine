@@ -2,7 +2,7 @@
 
 void processNormalKeys(unsigned char key, int xx, int yy) {
 	switch (key) {
-		case 27:is_in_menu = 1;break;
+		case 27:is_in_menu = 1;loadtextures();;Mix_Resume(-1);;break;
 		case 119:deltaMove = 0.5f; break;
 		case 115:deltaMove = -0.5f; break;
 		case 97:deltaMove2 = 0.5; break;

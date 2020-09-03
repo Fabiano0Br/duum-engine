@@ -31,7 +31,8 @@ void drawMenuHud(){
 	glTexCoord3f(0,0,0); glVertex3f(0.05f, 0.8f, 0.0f);    // bottom-left
 	glEnd();
 	glDisable(GL_TEXTURE_2D);*/
-	glBindTexture(GL_TEXTURE_2D, textures[3]);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glEnable(GL_TEXTURE_2D);
 	glBegin(GL_QUADS);
 	glTexCoord3f(0,1,0); glVertex3f(-1.0f, -2.0f, 0.0f);   // top-left
@@ -66,7 +67,7 @@ void drawGameHud(){
 	glTexCoord3f(0,1,0); glVertex3f(1.0f, -2.0f, 0.0f);   // top-left
 	glTexCoord3f(1,1,1); glVertex3f(1.9f, -2.0f, 0.0f);   // top-right
 	glTexCoord3f(1,0,0); glVertex3f(1.9f, -0.5f, 0.0f);    // bottom-right
-	glTexCoord3f(0,0,0); glVertex3f(1.0f, -0.5f, 0.0f);    // bottom-left
+	glTexCoord3f(0,0,0); glVertex3f(1.0f, -0.5f, 0.0f);    // bottom-left	
 	glEnd();
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_BLEND);

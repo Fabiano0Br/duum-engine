@@ -36,3 +36,8 @@
 *.x86_64
 *.hex
 *duum
+
+# Generated movie directory
+/MOVIE/**
+/ata/**
+audio.wav

@@ -171,7 +171,8 @@ void renderScene(void) {
 		glutSwapBuffers();
 	}
 	else if (is_in_menu == 1) {
-		setOrthographicProjection();
+		display();
+		setOrthographicProjection();	
 		glPushMatrix();
 		glLoadIdentity();
 		// kill me please
@@ -240,9 +241,10 @@ int main(int argc, char *argv[]) {
 	
 	// init Menus
 	createPopupMenus();
+	init();
 	// init mixer
 	mixerInit();
-	DUUM_SoundTest();
+	//	DUUM_SoundTest();
 	// enter GLUT event processing cycle
 	glutMainLoop();
 	return 1;

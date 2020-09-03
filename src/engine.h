@@ -27,4 +27,4 @@
 #include "audio/mixer.c"
 #include "graphics/texloader.c"
 #include "input/input.c"
-
+#include "video/video.c"

@@ -10,5 +10,6 @@ void bestfuncever() {
 }
 else {
 	is_in_menu = 0;
+	Mix_Pause(-1);
 }}
 
