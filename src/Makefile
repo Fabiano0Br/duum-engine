@@ -31,13 +31,8 @@ WOUT=$(WBINDIR)/duum.exe
 BINPATH=$(BINDIR)/lduum
 WINPATH=$(WBINDIR)/
 LOUT=launcher
-OBJ_SOIL= \
-  png/image_helper.o \
-  png/stb_image_aug.o  \
-  png/image_DXT.o \
-  png/SOIL.o
 OBJ_DUUM=main.o
-OBJ_ALL=$(OBJ_DUUM) $(OBJ_SOIL) ./png/lodepng.o
+OBJ_ALL=$(OBJ_DUUM) ./png/lodepng.o
 
 MV=$(shell cp -r ../res/* ../bin/res/)
 WMV=$(shell cp -r ../res/* ../winbin/res/)
